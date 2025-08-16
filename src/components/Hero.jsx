@@ -11,7 +11,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cosmic">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cosmic pt-16 md:pt-20">
       <div className="absolute inset-0 bg-stars opacity-30"></div>
       
       <div className="absolute inset-0">
@@ -38,7 +38,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 md:pt-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             className="text-center lg:text-left space-y-8"
