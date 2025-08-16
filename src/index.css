@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      'Space Grotesk',
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 via-accent-500 to-primary-600 bg-clip-text text-transparent;
+  }
+
+  .bg-cosmic {
+    @apply bg-cosmic-gradient;
+  }
+
+  .bg-stars {
+    @apply bg-star-pattern;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-accent-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary-500 text-primary-500 font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-primary-500 hover:text-white hover:scale-105;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
